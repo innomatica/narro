@@ -18,7 +18,7 @@ class _SignInPageState extends State<SignInPage> {
   //
   Widget _buildSignInWithGoogle(AuthLogic auth) {
     return SizedBox(
-      width: 200,
+      // width: 200,
       child: ElevatedButton.icon(
         icon: FaIcon(FontAwesomeIcons.google,
             size: 20, color: Theme.of(context).colorScheme.tertiary),
