@@ -90,26 +90,27 @@ class _AboutPageState extends State<AboutPage> {
             }
           },
         ),
-        ListTile(
-          title: Text(
-            'App Icons',
-            style: TextStyle(color: Theme.of(context).colorScheme.primary),
-          ),
-          subtitle: const Text("Book icons created by Freepik - Flaticon"),
-          onTap: () {
-            launchUrl(Uri.parse(urlAppIconSource));
-          },
-        ),
-        ListTile(
-          title: Text(
-            'Store Background Image',
-            style: TextStyle(color: Theme.of(context).colorScheme.primary),
-          ),
-          subtitle: const Text("Photo by Fabiola Peñalba at unsplash.com"),
-          onTap: () {
-            launchUrl(Uri.parse(urlStoreImageSource));
-          },
-        ),
+
+        // ListTile(
+        //   title: Text(
+        //     'App Icons',
+        //     style: TextStyle(color: Theme.of(context).colorScheme.primary),
+        //   ),
+        //   subtitle: const Text("Book icons created by Freepik - Flaticon"),
+        //   onTap: () {
+        //     launchUrl(Uri.parse(urlAppIconSource));
+        //   },
+        // ),
+        // ListTile(
+        //   title: Text(
+        //     'Store Background Image',
+        //     style: TextStyle(color: Theme.of(context).colorScheme.primary),
+        //   ),
+        //   subtitle: const Text("Photo by Fabiola Peñalba at unsplash.com"),
+        //   onTap: () {
+        //     launchUrl(Uri.parse(urlStoreImageSource));
+        //   },
+        // ),
         ListTile(
           title: Text(
             'Disclaimer',
@@ -144,6 +145,29 @@ class _AboutPageState extends State<AboutPage> {
             launchUrl(Uri.parse(urlHomePage),
                 mode: LaunchMode.externalApplication);
           },
+        ),
+        ListTile(
+          title: Text(
+            'Attributions',
+            style: TextStyle(color: Theme.of(context).colorScheme.primary),
+          ),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextButton(
+                onPressed: () => launchUrl(Uri.parse(urlAppIconSource)),
+                child: Text('Book icons created by Freepik - Flaticon',
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant)),
+              ),
+              TextButton(
+                onPressed: () => launchUrl(Uri.parse(urlStoreImageSource)),
+                child: Text('Store Photo by Fabiola Peñalba - unsplash.com',
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant)),
+              ),
+            ],
+          ),
         ),
       ],
     );

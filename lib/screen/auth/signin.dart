@@ -43,64 +43,64 @@ class _SignInPageState extends State<SignInPage> {
     final auth = context.read<AuthLogic>();
     return Scaffold(
       body: Center(
-        child: SizedBox(
-          width: 280,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              //
-              // Book image
-              //
-              SizedBox(
-                width: 140,
-                height: 140,
-                child: Image.asset(imageAssetReader, width: 30.0),
-              ),
-              const SizedBox(height: 20),
-              //
-              // App Name
-              //
-              Column(
-                children: [
-                  const Text(
-                    appName,
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w600,
-                      // color: Theme.of(context).colorScheme.primary,
-                    ),
+        // child: SizedBox(
+        // width: 280,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            //
+            // Book image
+            //
+            SizedBox(
+              width: 140,
+              height: 140,
+              child: Image.asset(imageAssetReader, width: 30.0),
+            ),
+            const SizedBox(height: 20),
+            //
+            // App Name
+            //
+            Column(
+              children: [
+                const Text(
+                  appName,
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w600,
+                    // color: Theme.of(context).colorScheme.primary,
                   ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Document Reader',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Theme.of(context).colorScheme.tertiary,
-                    ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'On Device Text-to-Speech',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Theme.of(context).colorScheme.tertiary,
                   ),
-                ],
-              ),
-              const SizedBox(height: 30),
-              //
-              // Sign In
-              //
-              // Text(
-              //   'Sign in to proceed',
-              //   style: TextStyle(
-              //     // fontSize: 30.0,
-              //     fontWeight: FontWeight.w600,
-              //     color: Theme.of(context).colorScheme.secondary,
-              //   ),
-              // ),
-              // const SizedBox(height: 18.0),
-              //
-              // Sign In with Google
-              //
-              _buildSignInWithGoogle(auth),
-            ],
-          ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 30),
+            //
+            // Sign In
+            //
+            // Text(
+            //   'Sign in to proceed',
+            //   style: TextStyle(
+            //     // fontSize: 30.0,
+            //     fontWeight: FontWeight.w600,
+            //     color: Theme.of(context).colorScheme.secondary,
+            //   ),
+            // ),
+            // const SizedBox(height: 18.0),
+            //
+            // Sign In with Google
+            //
+            _buildSignInWithGoogle(auth),
+          ],
         ),
+        // ),
       ),
     );
   }

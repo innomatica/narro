@@ -56,7 +56,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 // Cancel through Google Sign In Authentication
                 //
                 SizedBox(
-                  width: 200,
+                  // width: 200,
                   child: ElevatedButton.icon(
                     icon: FaIcon(FontAwesomeIcons.google,
                         size: 20,
