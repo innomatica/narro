@@ -42,7 +42,7 @@ class _SettingsPageState extends State<SettingsPage> {
         return StatefulBuilder(builder: (context, setState) {
           return AlertDialog(
             title: Text(
-              'To proceed, please sign in again',
+              'Sign in again to proceed',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w600,
