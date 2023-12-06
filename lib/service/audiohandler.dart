@@ -13,7 +13,7 @@ Future<AudioHandler> initAudioService() async {
   return await AudioService.init(
     builder: () => NarroAudioHandler(),
     config: const AudioServiceConfig(
-      androidNotificationChannelId: 'com.innomatic.narroapp.audio',
+      androidNotificationChannelId: 'com.innomatic.narroapp.channel.audio',
       androidNotificationChannelName: 'Narro',
       androidNotificationOngoing: true,
       androidNotificationIcon: 'drawable/app_icon',
