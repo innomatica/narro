@@ -16,6 +16,7 @@ Future<AudioHandler> initAudioService() async {
       androidNotificationChannelId: 'com.innomatic.narroapp.channel.audio',
       androidNotificationChannelName: 'Narro',
       androidNotificationOngoing: true,
+      androidStopForegroundOnPause: true,
       androidNotificationIcon: 'drawable/app_icon',
     ),
   );
