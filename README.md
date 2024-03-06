@@ -6,3 +6,7 @@ Text to Speech using Google Drive
 
 This app uses Firebase and Google sign-in. You need to create your own Firebase
 project and a flutter project with unique app id.
+
+## TODO
+
+* upgrade googleapis version to 13

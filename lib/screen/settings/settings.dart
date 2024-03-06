@@ -68,7 +68,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             ?.delete()
                             .then((_) => Navigator.of(context).pop(true));
                       } else {
-                        if (mounted) {
+                        if (context.mounted) {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text(
                               'Failed to delete account (${auth.lastError})',

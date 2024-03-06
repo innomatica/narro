@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                             if (file.id != null) {
                               final script = await player.getScript(
                                   id: file.id!, title: file.name!);
-                              if (script != null && mounted) {
+                              if (script != null && context.mounted) {
                                 debugPrint('inkwell.script:$script');
                                 String? note;
                                 showDialog(
