@@ -12,11 +12,11 @@ import '../shared/helpers.dart';
 Future<AudioHandler> initAudioService() async {
   return await AudioService.init(
     builder: () => NarroAudioHandler(),
-    config: const AudioServiceConfig(
+    config: AudioServiceConfig(
       androidNotificationChannelId: 'com.innomatic.narroapp.channel.audio',
       androidNotificationChannelName: 'Narro',
       androidNotificationOngoing: true,
-      androidStopForegroundOnPause: true,
+      androidStopForegroundOnPause: false,
       androidNotificationIcon: 'drawable/app_icon',
     ),
   );
