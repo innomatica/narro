@@ -12,11 +12,14 @@ import '../shared/helpers.dart';
 Future<AudioHandler> initAudioService() async {
   return await AudioService.init(
     builder: () => NarroAudioHandler(),
-    config: AudioServiceConfig(
+    config: const AudioServiceConfig(
       androidNotificationChannelId: 'com.innomatic.narroapp.channel.audio',
       androidNotificationChannelName: 'Narro',
       androidNotificationOngoing: true,
-      androidStopForegroundOnPause: false,
+      // this will keep the foreground on during pause
+      // check: https://pub.dev/packages/audio_service
+      // androidStopForegroundOnPause: false,
+      androidStopForegroundOnPause: true,
       androidNotificationIcon: 'drawable/app_icon',
     ),
   );
